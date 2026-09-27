@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS BROTHER | Transportation • Logistics • Construction</title>
+    <meta name="description" content="SS BROTHER provides transportation, logistics, construction services and construction material solutions. We move, we build, we deliver.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="SS BROTHER | Roadways • Transportation • Logistics • Construction">
+    <meta property="og:description" content="Integrated transportation, heavy logistics, civil construction and material supply solutions across India.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN for Utility Classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Luxury Industrial Styling -->
+    <style>
+        :root {
+            --bg-dark: #0A0B0D;
+            --bg-card: #121418;
+            --bg-card-hover: #1A1D24;
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA7C11;
+            --text-main: #F3F4F6;
+            --text-muted: #9CA3AF;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-space { font-family: 'Space Grotesk', sans-serif; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0A0B0D; }
+        ::-webkit-scrollbar-thumb { background: #262930; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+        /* Metallic Gold Gradient & Text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 30%, #B38728 70%, #AA7C11 100%);
+        }
+
+        .bg-gold-dark { background-color: var(--gold-dark); }
+        .border-gold-glow {
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .border-gold-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+            border-color: rgba(212, 175, 55, 0.6);
+        }
+
+        /* Glassmorphism */
+        .glass-nav {
+            background: rgba(10, 11, 13, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card {
+            background: rgba(18, 20, 24, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+        }
+
+        /* Custom Hover & Sweep Animations */
+        .gold-sweep {
+            position: relative;
+            overflow: hidden;
+        }
+        .gold-sweep::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.25);
+            transform: rotate(30deg);
+            transition: all 0.75s ease-in-out;
+        }
+        .gold-sweep:hover::after {
+            left: 140%;
+        }
+
+        /* Hero Light Pulse & Motion */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        .animate-glow { animation: pulseGlow 4s infinite ease-in-out; }
+
+        @keyframes lightStreak {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(200%); }
+        }
+        .animate-streak { animation: lightStreak 3s infinite linear; }
+
+        /* Modal Overlay Transition */
+        .modal-active {
+            display: flex !important;
+            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Horizontal Fleet Scroll Bar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SS BROTHER",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+      "telephone": "+918688855683",
+      "priceRange": "Price On Request",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN",
+        "streetAddress": "[ADD REAL OFFICE ADDRESS]"
+      },
+      "description": "Integrated Heavy Transportation, Logistics, Construction Services and Construction Material Supply Solutions."
+    }
+    </script>
+</head>
+<body class="selection:bg-amber-500 selection:text-black">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gold-gradient z-50 transition-all duration-150 w-0"></div>
+
+    <!-- 1. LOADING SCREEN -->
+    <div id="loading-screen" class="fixed inset-0 bg-[#0A0B0D] z-[100] flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <h1 class="font-cinzel text-4xl sm:text-6xl font-extrabold tracking-widest text-gold-gradient mb-2">SS BROTHER</h1>
+            <p class="font-space text-xs sm:text-sm tracking-[0.3em] text-gray-400 uppercase">Roadways • Logistics • Construction</p>
+            <div class="w-48 h-1 bg-gray-800 rounded-full mt-6 overflow-hidden relative">
+                <div class="absolute top-0 left-0 h-full w-full bg-gold-gradient animate-streak"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. STICKY NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex flex-col">
+                <span class="font-cinzel text-2xl sm:text-3xl font-black tracking-widest text-gold-gradient">SS BROTHER</span>
+                <span class="text-[9px] tracking-[0.25em] text-gray-400 font-bold uppercase -mt-1">Move • Build • Deliver</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold uppercase tracking-wider text-gray-300">
+                <a href="#home" class="hover:text-[#D4AF37] transition-colors">Home</a>
+                <a href="#about" class="hover:text-[#D4AF37] transition-colors">About</a>
+                <a href="#services" class="hover:text-[#D4AF37] transition-colors">Services</a>
+                <a href="#transport" class="hover:text-[#D4AF37] transition-colors">Transport</a>
+                <a href="#logistics" class="hover:text-[#D4AF37] transition-colors">Logistics</a>
+                <a href="#materials" class="hover:text-[#D4AF37] transition-colors">Materials</a>
+                <a href="#fleet" class="hover:text-[#D4AF37] transition-colors">Fleet</a>
+                <a href="#projects" class="hover:text-[#D4AF37] transition-colors">Projects</a>
+                <a href="#reviews" class="hover:text-[#D4AF37] transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+            </nav>
+
+            <!-- Navigation CTA -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#quote-calculator" class="gold-sweep px-5 py-2.5 rounded text-xs font-bold uppercase tracking-wider text-black bg-gold-gradient hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Get Quote
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="menu-toggle" aria-label="Toggle Navigation" class="lg:hidden text-amber-400 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#0A0B0D]/95 backdrop-blur-xl border-b border-amber-500/20 px-6 py-6 space-y-4 text-sm uppercase tracking-wider">
+            <a href="#home" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Home</a>
+            <a href="#about" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">About</a>
+            <a href="#services" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Services</a>
+            <a href="#transport" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Transport</a>
+            <a href="#logistics" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Logistics</a>
+            <a href="#materials" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Materials</a>
+            <a href="#fleet" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Fleet</a>
+            <a href="#projects" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Projects</a>
+            <a href="#reviews" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Reviews</a>
+            <a href="#contact" class="mobile-link block text-gray-200 hover:text-amber-400 py-2 border-b border-gray-800">Contact</a>
+            <div class="pt-2 flex flex-col space-y-3">
+                <a href="tel:8688855683" class="w-full text-center py-3 bg-amber-500/10 border border-amber-500/40 text-amber-400 font-bold rounded">
+                    <i class="fa-solid fa-phone mr-2"></i> CALL NOW: 86888 55683
+                </a>
+                <a href="#quote-calculator" class="mobile-link w-full text-center py-3 bg-gold-gradient text-black font-bold rounded">GET A QUOTE</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-black">
+        <!-- Cinematic Background Layers -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=80" alt="Heavy Logistics Transport" class="w-full h-full object-cover object-center opacity-30 transform scale-105 transition-transform duration-10000">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0B0D] via-[#0A0B0D]/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0A0B0D] via-transparent to-[#0A0B0D]/80"></div>
+            <!-- Dynamic Gold Glow Overlay -->
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none animate-glow"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center sm:text-left flex flex-col justify-center min-h-[calc(100vh-80px)]">
+            <!-- Floating Live Badge -->
+            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-card border-gold-glow mb-8 w-max mx-auto sm:mx-0">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                <span class="text-xs font-semibold tracking-widest uppercase text-amber-300">24/7 Transport & Infrastructure Support</span>
+            </div>
+
+            <!-- Main Tagline Headline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-none mb-6">
+                <span class="block text-white">WE MOVE.</span>
+                <span class="block text-gold-gradient my-1">WE BUILD.</span>
+                <span class="block text-white">WE DELIVER.</span>
+            </h1>
+
+            <p class="max-w-2xl text-base sm:text-lg md:text-xl text-gray-300 font-light mb-10 leading-relaxed">
+                Professional Heavy Transportation, Project Logistics, Infrastructure Development & Material Supply Solutions Engineered for High-Scale Operations.
+            </p>
+
+            <!-- Hero Action CTAs -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-start">
+                <a href="#quote-calculator" class="w-full sm:w-auto text-center px-8 py-4 rounded bg-gold-gradient text-black font-extrabold uppercase tracking-wider gold-sweep shadow-xl hover:scale-105 transition-all duration-300">
+                    <i class="fa-solid fa-file-invoice mr-2"></i> Get A Quote
+                </a>
+                <a href="tel:8688855683" class="w-full sm:w-auto text-center px-8 py-4 rounded bg-transparent border-2 border-amber-500/60 text-amber-400 hover:bg-amber-500/10 font-bold uppercase tracking-wider transition-all duration-300">
+                    <i class="fa-solid fa-phone mr-2"></i> Call 86888 55683
+                </a>
+                <a href="#services" class="w-full sm:w-auto text-center px-8 py-4 rounded glass-card hover:border-amber-500/50 text-gray-200 font-semibold uppercase tracking-wider transition-all duration-300">
+                    Explore Services
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="mt-16 hidden sm:flex items-center space-x-3 text-xs tracking-widest uppercase text-gray-500">
+                <span class="w-8 h-[1px] bg-amber-500/50"></span>
+                <span>Scroll to Explore Infrastructure Fleet</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. QUICK FLOATING MOBILE CONTACT BAR -->
+    <div class="fixed bottom-0 left-0 w-full z-40 bg-[#0A0B0D]/95 border-t border-amber-500/20 backdrop-blur-lg sm:hidden">
+        <div class="grid grid-cols-4 text-center text-[10px] font-bold uppercase tracking-wider">
+            <a href="tel:8688855683" class="py-3 text-amber-400 hover:bg-amber-500/10 border-r border-gray-800">
+                <i class="fa-solid fa-phone text-base block mb-0.5"></i> Call
+            </a>
+            <a href="https://wa.me/918688855683?text=Hello%20SS%20BROTHER,%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="py-3 text-emerald-400 hover:bg-emerald-500/10 border-r border-gray-800">
+                <i class="fa-brands fa-whatsapp text-base block mb-0.5"></i> WhatsApp
+            </a>
+            <a href="#contact" class="mobile-link py-3 text-sky-400 hover:bg-sky-500/10 border-r border-gray-800">
+                <i class="fa-solid fa-location-dot text-base block mb-0.5"></i> Location
+            </a>
+            <a href="#quote-calculator" class="mobile-link py-3 text-amber-300 hover:bg-amber-500/10">
+                <i class="fa-solid fa-calculator text-base block mb-0.5"></i> Quote
+            </a>
+        </div>
+    </div>
+
+    <!-- 5. ABOUT SS BROTHER -->
+    <section id="about" class="py-24 bg-[#0E1014] border-t border-b border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-3">Enterprise Overview</span>
+                    <h2 class="font-cinzel text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mb-6 leading-tight">
+                        BUILT TO MOVE.<br><span class="text-gold-gradient">BUILT TO LAST.</span>
+                    </h2>
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 font-light">
+                        <strong>SS BROTHER</strong> provides integrated transportation, logistics, heavy vehicle dispatch, civil construction, and high-grade construction material solutions engineered for corporate, commercial, and industrial infrastructure requirements.
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                        Operating with precision coordination, our heavy transport vehicles and earthmoving equipment back large-scale projects, guaranteeing route efficiency, reliable material management, and scalable operational support.
+                    </p>
+                    <div class="p-4 rounded border-l-2 border-amber-500 bg-amber-500/5 text-amber-200 text-sm italic">
+                        “Reliable Transportation. Powerful Logistics. Strong Foundations.”
+                    </div>
+                </div>
+
+                <!-- Animated Dynamic Statistics Grid -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-lg border-gold-glow text-center">
+                        <div class="font-space text-4xl sm:text-5xl font-extrabold text-gold-gradient mb-2" id="stat-years">10+</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-gray-400">Years Experience</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg border-gold-glow text-center">
+                        <div class="font-space text-4xl sm:text-5xl font-extrabold text-gold-gradient mb-2" id="stat-projects">500+</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-gray-400">Projects Executed</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg border-gold-glow text-center">
+                        <div class="font-space text-4xl sm:text-5xl font-extrabold text-gold-gradient mb-2" id="stat-deliveries">1000+</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-gray-400">Deliveries Completed</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg border-gold-glow text-center">
+                        <div class="font-space text-4xl sm:text-5xl font-extrabold text-gold-gradient mb-2">24/7</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-gray-400">Support Operations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SERVICES SECTION (INTERACTIVE GRID) -->
+    <section id="services" class="py-24 bg-[#0A0B0D] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Core Solutions</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white uppercase">Integrated Capability</h2>
+                <p class="text-gray-400 text-sm mt-3">Click any service module to review detailed technical specifications and operational workflows.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div onclick="openServiceModal('transport')" class="glass-card p-8 rounded-xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-gold-gradient group-hover:text-black transition-all">
+                            <i class="fa-solid fa-truck-monster"></i>
+                        </div>
+                        <span class="text-xs font-space text-amber-400 font-bold tracking-widest block mb-1">SERVICE 01</span>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">Transportation</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Heavy load transport, long-distance trailers, tippers, container haulage & project vehicle deployment.</p>
+                    </div>
+                    <div class="text-xs font-bold tracking-wider uppercase text-amber-400 flex items-center group-hover:translate-x-2 transition-transform">
+                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div onclick="openServiceModal('logistics')" class="glass-card p-8 rounded-xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-gold-gradient group-hover:text-black transition-all">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <span class="text-xs font-space text-amber-400 font-bold tracking-widest block mb-1">SERVICE 02</span>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">Logistics</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">End-to-end supply chain planning, bulk material movement, warehousing coordination & route optimization.</p>
+                    </div>
+                    <div class="text-xs font-bold tracking-wider uppercase text-amber-400 flex items-center group-hover:translate-x-2 transition-transform">
+                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div onclick="openServiceModal('construction')" class="glass-card p-8 rounded-xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-gold-gradient group-hover:text-black transition-all">
+                            <i class="fa-solid fa-person-digging"></i>
+                        </div>
+                        <span class="text-xs font-space text-amber-400 font-bold tracking-widest block mb-1">SERVICE 03</span>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">Construction</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">Civil infrastructure development, road building, site grading, earthwork and heavy earthmoving support.</p>
+                    </div>
+                    <div class="text-xs font-bold tracking-wider uppercase text-amber-400 flex items-center group-hover:translate-x-2 transition-transform">
+                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div onclick="openServiceModal('materials')" class="glass-card p-8 rounded-xl border border-white/10 hover:border-amber-500/50 transition-all duration-300 cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-gold-gradient group-hover:text-black transition-all">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <span class="text-xs font-space text-amber-400 font-bold tracking-widest block mb-1">SERVICE 04</span>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">Materials</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-6">High-grade Sand, M-Sand, Aggregates, Cement, Bricks, Steel, Stone, & essential site raw materials.</p>
+                    </div>
+                    <div class="text-xs font-bold tracking-wider uppercase text-amber-400 flex items-center group-hover:translate-x-2 transition-transform">
+                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SERVICE DETAIL MODAL SYSTEM -->
+    <div id="service-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="glass-card bg-[#121418] border border-amber-500/30 rounded-xl max-w-3xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto my-auto">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="service-modal-content">
+                <!-- Dynamically Injected Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. TRANSPORTATION SOLUTIONS & FLEET TYPES -->
+    <section id="transport" class="py-24 bg-[#0E1014]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Fleet Solutions</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white uppercase">Transportation Vehicles</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-lg border border-white/5 hover:border-amber-500/40 transition">
+                    <div class="text-3xl mb-3">🚛</div>
+                    <h4 class="text-base font-bold text-white mb-2">Container Transport</h4>
+                    <p class="text-xs text-gray-400 mb-4">Secure enclosed movement for commercial goods & manufacturing logistics.</p>
+                    <a href="#quote-calculator" class="text-xs font-bold text-amber-400 uppercase tracking-wider">Request Fleet →</a>
+                </div>
+                <div class="glass-card p-6 rounded-lg border border-white/5 hover:border-amber-500/40 transition">
+                    <div class="text-3xl mb-3">🚚</div>
+                    <h4 class="text-base font-bold text-white mb-2">Trailer Transport</h4>
+                    <p class="text-xs text-gray-400 mb-4">Heavy flatbed and high-bed trailers for oversized equipment & structures.</p>
+                    <a href="#quote-calculator" class="text-xs font-bold text-amber-400 uppercase tracking-wider">Request Fleet →</a>
+                </div>
+                <div class="glass-card p-6 rounded-lg border border-white/5 hover:border-amber-500/40 transition">
+                    <div class="text-3xl mb-3">🚛</div>
+                    <h4 class="text-base font-bold text-white mb-2">Multi-Axle Vehicles</h4>
+                    <p class="text-xs text-gray-400 mb-4">High-capacity axles designed for ultra-heavy industrial payload distributions.</p>
+                    <a href="#quote-calculator" class="text-xs font-bold text-amber-400 uppercase tracking-wider">Request Fleet →</a>
+                </div>
+                <div class="glass-card p-6 rounded-lg border border-white/5 hover:border-amber-500/40 transition">
+                    <div class="text-3xl mb-3">🚜</div>
+                    <h4 class="text-base font-bold text-white mb-2">Tipper Haulage</h4>
+                    <p class="text-xs text-gray-400 mb-4">Hydraulic tippers built for sand, gravel, stone, and aggregates site delivery.</p>
+                    <a href="#quote-calculator" class="text-xs font-bold text-amber-400 uppercase tracking-wider">Request Fleet →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. LOGISTICS TRACKING UI (DEMO INTERFACE) -->
+    <section id="logistics" class="py-24 bg-[#0A0B0D] border-t border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Live Monitoring Prototype</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white uppercase mb-4">Logistics Tracking Interface</h2>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Our integrated logistics planning allows complete stage-by-stage status management from consignment loading to site delivery.
+                    </p>
+                    <div class="p-4 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-6">
+                        <i class="fa-solid fa-circle-info mr-2"></i> DEMO TRACKING INTERFACE — Simulated dispatch timeline visualization.
+                    </div>
+                </div>
+
+                <!-- Interactive Dashboard Card -->
+                <div class="glass-card p-6 sm:p-8 rounded-xl border border-amber-500/30 shadow-2xl relative">
+                    <div class="flex items-center justify-between border-b border-gray-800 pb-4 mb-6">
+                        <div>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-widest font-mono">TRACKING ID: #SSB-8855-2026</span>
+                            <h4 class="text-sm font-bold text-white">Consignment Route: Heavy Material Dispatch</h4>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
+                            ● Active
+                        </span>
+                    </div>
+
+                    <!-- Workflow Timeline -->
+                    <div class="space-y-6 relative pl-6 border-l-2 border-amber-500/30">
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center text-[10px] text-black font-bold">✓</span>
+                            <h5 class="text-xs font-bold text-white uppercase">01. Order & Pickup</h5>
+                            <p class="text-[11px] text-gray-400">Materials loaded & origin site verification completed.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-amber-400 animate-pulse"></span>
+                            <h5 class="text-xs font-bold text-amber-300 uppercase">02. Transit Highway Dispatch</h5>
+                            <p class="text-[11px] text-gray-400">In Transit — Route optimization active.</p>
+                        </div>
+                        <div class="relative opacity-50">
+                            <span class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-gray-700"></span>
+                            <h5 class="text-xs font-bold text-gray-300 uppercase">03. Destination Delivery</h5>
+                            <p class="text-[11px] text-gray-400">Pending final offloading & client signoff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CONSTRUCTION MATERIALS CATALOG -->
+    <section id="materials" class="py-24 bg-[#0E1014]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Direct Supply</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white uppercase">Construction Materials Catalog</h2>
+                <p class="text-gray-400 text-sm mt-2">Quality tested raw materials supplied directly to project sites.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Sand -->
+                <div class="glass-card p-5 rounded-lg border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-32 bg-gray-900 rounded mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" alt="River Sand & Sand" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-white text-base">Sand / River Sand</h4>
+                        <p class="text-[11px] text-gray-400 my-2">High purity sand for structural concrete & masonry work.</p>
+                    </div>
+                    <div>
+                        <div class="text-[11px] font-bold text-amber-400 mb-3">PRICE ON REQUEST</div>
+                        <button onclick="openMaterialModal('Sand')" class="w-full py-2 bg-amber-500/10 hover:bg-gold-gradient hover:text-black border border-amber-500/30 text-amber-300 font-bold text-xs uppercase rounded transition">Enquire Now</button>
+                    </div>
+                </div>
+
+                <!-- M-Sand -->
+                <div class="glass-card p-5 rounded-lg border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-32 bg-gray-900 rounded mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1578885136359-16c8bd4d3a8e?auto=format&fit=crop&w=600&q=80" alt="Manufactured Sand" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-white text-base">M-Sand (Manufactured)</h4>
+                        <p class="text-[11px] text-gray-400 my-2">Precision engineered eco-friendly concrete sand.</p>
+                    </div>
+                    <div>
+                        <div class="text-[11px] font-bold text-amber-400 mb-3">PRICE ON REQUEST</div>
+                        <button onclick="openMaterialModal('M-Sand')" class="w-full py-2 bg-amber-500/10 hover:bg-gold-gradient hover:text-black border border-amber-500/30 text-amber-300 font-bold text-xs uppercase rounded transition">Enquire Now</button>
+                    </div>
+                </div>
+
+                <!-- Aggregates -->
+                <div class="glass-card p-5 rounded-lg border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-32 bg-gray-900 rounded mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Crushed Aggregates" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-white text-base">20mm / 40mm Aggregates</h4>
+                        <p class="text-[11px] text-gray-400 my-2">Crushed granite stone aggregate for high load strength foundation.</p>
+                    </div>
+                    <div>
+                        <div class="text-[11px] font-bold text-amber-400 mb-3">PRICE ON REQUEST</div>
+                        <button onclick="openMaterialModal('Aggregates')" class="w-full py-2 bg-amber-500/10 hover:bg-gold-gradient hover:text-black border border-amber-500/30 text-amber-300 font-bold text-xs uppercase rounded transition">Enquire Now</button>
+                    </div>
+                </div>
+
+                <!-- Cement & Steel -->
+                <div class="glass-card p-5 rounded-lg border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-32 bg-gray-900 rounded mb-4 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Cement and TMT Steel" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-white text-base">Cement & TMT Steel</h4>
+                        <p class="text-[11px] text-gray-400 my-2">Grade-certified cement bags & structural steel reinforcements.</p>
+                    </div>
+                    <div>
+                        <div class="text-[11px] font-bold text-amber-400 mb-3">PRICE ON REQUEST</div>
+                        <button onclick="openMaterialModal('Cement & Steel')" class="w-full py-2 bg-amber-500/10 hover:bg-gold-gradient hover:text-black border border-amber-500/30 text-amber-300 font-bold text-xs uppercase rounded transition">Enquire Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CONSTRUCTION PROJECTS PORTFOLIO -->
+    <section id="projects" class="py-24 bg-[#0A0B0D]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Track Record</span>
+                    <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white uppercase">Project Portfolio</h2>
+                </div>
+                <div class="text-xs text-amber-400 font-semibold mt-4 md:mt-0 p-2 rounded bg-amber-500/10 border border-amber-500/20">
+                    * Placeholder data marked for client replacement.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-xl overflow-hidden border border-white/10 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80" alt="Road Infrastructure Development" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400">Road Infrastructure</span>
+                        <h4 class="text-lg font-bold text-white my-2">Highway Expansion Project</h4>
+                        <p class="text-xs text-gray-400 mb-4">Earthwork, site leveling, and multi-axle bulk aggregate haulage.</p>
+                        <span class="text-[11px] text-gray-500 italic">[ADD REAL PROJECT DETAILS]</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-xl overflow-hidden border border-white/10 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" alt="Industrial Logistics Deployment" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400">Industrial Logistics</span>
+                        <h4 class="text-lg font-bold text-white my-2">Heavy Machinery Transit</h4>
+                        <p class="text-xs text-gray-400 mb-4">Long-distance commercial machinery movement with hydraulic trailers.</p>
+                        <span class="text-[11px] text-gray-500 italic">[ADD REAL PROJECT DETAILS]</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-xl overflow-hidden border border-white/10 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Commercial Site Preparation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400">Site Development</span>
+                        <h4 class="text-lg font-bold text-white my-2">Commercial Foundation Prep</h4>
+                        <p class="text-xs text-gray-400 mb-4">Bulk material dispatch and heavy excavator site clearance execution.</p>
+                        <span class="text-[11px] text-gray-500 italic">[ADD REAL PROJECT DETAILS]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FLEET SHOWCASE (HORIZONTAL SLIDER) -->
+    <section id="fleet" class="py-24 bg-[#0E1014] border-t border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-12">
+                <div>
+                    <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Heavy Vehicles</span>
+                    <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white uppercase">Fleet Roster</h2>
+                </div>
+                <p class="hidden sm:block text-xs text-gray-400">Scroll horizontally to inspect heavy equipment →</p>
+            </div>
+
+            <div class="flex space-x-6 overflow-x-auto no-scrollbar pb-6">
+                <!-- Fleet Item 1 -->
+                <div class="min-w-[280px] sm:min-w-[340px] glass-card p-6 rounded-xl border border-white/10 flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="Heavy Tipper Truck" class="w-full h-40 object-cover rounded mb-4">
+                    <h4 class="text-base font-bold text-white">Hydraulic Tipper Truck</h4>
+                    <p class="text-xs text-gray-400 my-2">Aggregate & Bulk Raw Material Haulage</p>
+                    <a href="tel:8688855683" class="inline-block mt-2 text-xs font-bold text-amber-400 uppercase">Enquire Fleet →</a>
+                </div>
+
+                <!-- Fleet Item 2 -->
+                <div class="min-w-[280px] sm:min-w-[340px] glass-card p-6 rounded-xl border border-white/10 flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Heavy Cargo Trailer" class="w-full h-40 object-cover rounded mb-4">
+                    <h4 class="text-base font-bold text-white">Multi-Axle Trailer</h4>
+                    <p class="text-xs text-gray-400 my-2">Long-Distance Commercial Equipment Freight</p>
+                    <a href="tel:8688855683" class="inline-block mt-2 text-xs font-bold text-amber-400 uppercase">Enquire Fleet →</a>
+                </div>
+
+                <!-- Fleet Item 3 -->
+                <div class="min-w-[280px] sm:min-w-[340px] glass-card p-6 rounded-xl border border-white/10 flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?auto=format&fit=crop&w=600&q=80" alt="Heavy Excavator Machine" class="w-full h-40 object-cover rounded mb-4">
+                    <h4 class="text-base font-bold text-white">Earthmoving Excavator</h4>
+                    <p class="text-xs text-gray-400 my-2">Civil Site Preparation & Heavy Excavation</p>
+                    <a href="tel:8688855683" class="inline-block mt-2 text-xs font-bold text-amber-400 uppercase">Enquire Fleet →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. REVIEWS & TESTIMONIAL SYSTEM -->
+    <section id="reviews" class="py-24 bg-[#0A0B0D]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Rating Summary -->
+                <div class="glass-card p-8 rounded-xl border border-gold-glow flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Verified Feedback</span>
+                        <h3 class="font-cinzel text-3xl font-bold text-white mb-4">Client Reviews</h3>
+                        <div class="text-5xl font-black text-gold-gradient font-space mb-2">4.9 <span class="text-lg text-gray-400 font-normal">/ 5</span></div>
+                        <div class="text-amber-400 text-lg space-x-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Ratings based on real client experience submissions. Submit your review below.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-800">
+                        <span class="text-[11px] text-amber-300/80 block">DEMO REVIEW NOTICE — Initial items shown as placeholders for new feedback.</span>
+                    </div>
+                </div>
+
+                <!-- Reviews Feed & Interactive Submission Form -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Dynamic Reviews Container -->
+                    <div id="reviews-container" class="space-y-4">
+                        <!-- Demo Review Card -->
+                        <div class="glass-card p-6 rounded-lg border border-white/5">
+                            <div class="flex items-center justify-between mb-3">
+                                <div>
+                                    <h5 class="text-sm font-bold text-white">Commercial Logistics Client</h5>
+                                    <span class="text-[10px] text-amber-400 uppercase tracking-widest">Transportation & Freight</span>
+                                </div>
+                                <div class="text-amber-400 text-xs">★★★★★</div>
+                            </div>
+                            <p class="text-xs text-gray-300 italic">“Great transportation service and professional coordination for long-distance transport.”</p>
+                            <span class="text-[10px] text-gray-500 mt-3 block">DEMO REVIEW — REPLACE WITH REAL CUSTOMER REVIEW</span>
+                        </div>
+                    </div>
+
+                    <!-- Submission Form -->
+                    <div class="glass-card p-6 sm:p-8 rounded-xl border border-white/10">
+                        <h4 class="text-lg font-bold text-white mb-4">Share Your Experience</h4>
+                        <form id="review-form" onsubmit="handleReviewSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input type="text" id="rev-name" placeholder="Your Full Name *" required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+                                <input type="text" id="rev-service" placeholder="Service Used (e.g. Transport, Sand Supply) *" required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <label class="text-xs text-gray-400">Rating:</label>
+                                <select id="rev-rating" class="bg-black/60 border border-gray-800 rounded px-3 py-2 text-xs text-amber-400 focus:outline-none focus:border-amber-500">
+                                    <option value="5">★★★★★ (5/5)</option>
+                                    <option value="4">★★★★☆ (4/5)</option>
+                                    <option value="3">★★★☆☆ (3/5)</option>
+                                </select>
+                            </div>
+                            <textarea id="rev-text" rows="3" placeholder="Write your review experience..." required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500"></textarea>
+                            <div class="flex items-center justify-between">
+                                <button type="submit" class="px-6 py-3 bg-gold-gradient text-black font-bold text-xs uppercase rounded hover:opacity-90 transition">Submit Review</button>
+                                <span class="text-[10px] text-gray-500">* Reviews saved locally for verification.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. INTERACTIVE QUOTE CALCULATOR -->
+    <section id="quote-calculator" class="py-24 bg-[#0E1014] border-t border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Estimate Generator</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white uppercase">Requirement Quotation Estimator</h2>
+            </div>
+
+            <div class="glass-card p-6 sm:p-10 rounded-2xl border-gold-glow">
+                <form id="calc-form" onsubmit="calculateQuote(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Service Type</label>
+                            <select id="calc-service" class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:border-amber-500">
+                                <option>Heavy Transportation</option>
+                                <option>Logistics & Freight</option>
+                                <option>Civil Construction</option>
+                                <option>Material Supply</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Material / Cargo Type</label>
+                            <input type="text" id="calc-material" placeholder="e.g. M-Sand, Excavator, Aggregate" required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Pickup / Origin</label>
+                            <input type="text" id="calc-pickup" placeholder="Location Name" required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase mb-2">Delivery Destination</label>
+                            <input type="text" id="calc-delivery" placeholder="Destination Name" required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-gold-gradient text-black font-extrabold text-xs uppercase tracking-widest rounded gold-sweep hover:scale-[1.01] transition">
+                        Calculate Estimate
+                    </button>
+                </form>
+
+                <div id="calc-result" class="hidden mt-8 p-6 rounded bg-amber-500/10 border border-amber-500/30 text-center">
+                    <h4 class="text-sm font-bold text-amber-300 uppercase tracking-widest mb-2">Estimated Pricing Status</h4>
+                    <p class="text-xs text-gray-300 mb-4">Estimated pricing will be confirmed directly by SS BROTHER representatives based on distance and load scale.</p>
+                    <a href="tel:8688855683" class="inline-block px-6 py-3 bg-gold-gradient text-black font-bold text-xs uppercase rounded">Confirm Official Quote: 86888 55683</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. FAQ SECTION -->
+    <section class="py-24 bg-[#0A0B0D]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Inquiries</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white uppercase">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="glass-card p-5 rounded-lg border border-white/5 cursor-pointer">
+                    <summary class="font-bold text-white text-sm focus:outline-none">What transportation services does SS BROTHER supply?</summary>
+                    <p class="text-xs text-gray-400 mt-3 leading-relaxed">We provide long-distance trailers, hydraulic tippers, multi-axle heavy machinery transport, open body trucks, and container logistics.</p>
+                </details>
+                <details class="glass-card p-5 rounded-lg border border-white/5 cursor-pointer">
+                    <summary class="font-bold text-white text-sm focus:outline-none">Do you supply raw construction materials directly to sites?</summary>
+                    <p class="text-xs text-gray-400 mt-3 leading-relaxed">Yes, we supply River Sand, M-Sand, 20mm/40mm Aggregates, Gravel, Cement, Bricks, and TMT Steel in bulk quantities.</p>
+                </details>
+                <details class="glass-card p-5 rounded-lg border border-white/5 cursor-pointer">
+                    <summary class="font-bold text-white text-sm focus:outline-none">How can I obtain a customized quote for heavy vehicle transport?</summary>
+                    <p class="text-xs text-gray-400 mt-3 leading-relaxed">You can call us directly at 8688855683, submit an inquiry through the interactive quote form, or message our WhatsApp team.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. CONTACT & DIRECT INQUIRY SECTION -->
+    <section id="contact" class="py-24 bg-[#0E1014] border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-xs font-bold tracking-[0.3em] text-amber-400 uppercase block mb-2">Get In Touch</span>
+                    <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white uppercase mb-6 leading-tight">
+                        LET'S MOVE YOUR<br><span class="text-gold-gradient">PROJECT FORWARD.</span>
+                    </h2>
+
+                    <!-- Contact Detail Cards -->
+                    <div class="space-y-6">
+                        <div class="glass-card p-5 rounded-lg border border-white/5 flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Direct Phone Contact</span>
+                                <a href="tel:8688855683" class="text-lg font-bold text-white hover:text-amber-400 transition">86888 55683</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-5 rounded-lg border border-white/5 flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Instant WhatsApp Support</span>
+                                <a href="https://wa.me/918688855683?text=Hello%20SS%20BROTHER,%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="text-sm font-bold text-emerald-400 hover:underline">+91 86888 55683</a>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-5 rounded-lg border border-white/5 flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Office Location</span>
+                                <p class="text-xs text-gray-300 font-mono">[ADD REAL OFFICE ADDRESS]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card p-8 rounded-2xl border-gold-glow">
+                    <h4 class="text-lg font-bold text-white mb-6 uppercase tracking-wider">Direct Project Inquiry</h4>
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <input type="text" placeholder="Full Name *" required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="tel" placeholder="Phone Number *" required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+                            <input type="email" placeholder="Email Address" class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                        <select class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500">
+                            <option>Heavy Vehicle Transportation</option>
+                            <option>Project Logistics</option>
+                            <option>Civil Construction</option>
+                            <option>Construction Material Supply</option>
+                        </select>
+                        <textarea rows="4" placeholder="Detail your project or material requirement..." required class="w-full bg-black/60 border border-gray-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500"></textarea>
+                        <button type="submit" class="w-full py-4 bg-gold-gradient text-black font-extrabold text-xs uppercase tracking-widest rounded gold-sweep hover:opacity-90 transition">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. FOOTER -->
+    <footer class="bg-black py-16 border-t border-amber-500/20 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <h3 class="font-cinzel text-xl font-bold text-gold-gradient">SS BROTHER</h3>
+                    <p class="text-gray-400 text-xs italic">“WE MOVE. WE BUILD. WE DELIVER.”</p>
+                    <p class="text-gray-500 text-[11px] leading-relaxed">
+                        Integrated transportation, logistics heavy vehicle fleet deployment, civil infrastructure development and site raw material supply.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider mb-4">Core Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-amber-400">Heavy Transportation</a></li>
+                        <li><a href="#services" class="hover:text-amber-400">Project Logistics</a></li>
+                        <li><a href="#services" class="hover:text-amber-400">Civil Construction</a></li>
+                        <li><a href="#materials" class="hover:text-amber-400">Construction Materials</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-amber-400">Home</a></li>
+                        <li><a href="#about" class="hover:text-amber-400">About Us</a></li>
+                        <li><a href="#fleet" class="hover:text-amber-400">Fleet Roster</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-400">Client Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider mb-4">Immediate Contact</h4>
+                    <p class="text-gray-300 font-bold mb-2">Phone: <a href="tel:8688855683" class="text-amber-400">86888 55683</a></p>
+                    <div class="flex space-x-4 mt-4 text-lg text-amber-400">
+                        <a href="#" aria-label="Facebook" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube" class="hover:text-white"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center text-gray-600 text-[11px]">
+                <p>© 2026 SS BROTHER. All Rights Reserved.</p>
+                <p class="mt-2 sm:mt-0">Design standard: Luxury Corporate Infrastructure</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT ENGINE -->
+    <script>
+        // 1. Loading Screen Removal
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 700);
+            }, 500);
+        });
+
+        // 2. Scroll Progress & Sticky Nav Highlight
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + '%';
+        });
+
+        // 3. Mobile Navigation Drawer Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 4. Dynamic Editable Statistics Configuration
+        const companyStats = {
+            years: "10+",
+            projects: "500+",
+            deliveries: "1000+"
+        };
+
+        document.getElementById('stat-years').innerText = companyStats.years;
+        document.getElementById('stat-projects').innerText = companyStats.projects;
+        document.getElementById('stat-deliveries').innerText = companyStats.deliveries;
+
+        // 5. Service Modal Details Injection System
+        const serviceDetails = {
+            transport: {
+                title: "Heavy Vehicle Transportation",
+                desc: "Long-distance industrial, commercial, and project heavy freight transit solutions.",
+                types: ["Container Trucks", "Trailer Trucks", "Multi-Axle Vehicles", "Tippers", "Open Body Trucks"],
+                cta: "tel:8688855683"
+            },
+            logistics: {
+                title: "Integrated Project Logistics",
+                desc: "End-to-end supply chain planning, bulk freight management, and distribution site routing.",
+                types: ["Supply Chain Strategy", "Warehouse Logistics", "Route Optimization", "Bulk Material Logistics"],
+                cta: "https://wa.me/918688855683"
+            },
+            construction: {
+                title: "Civil & Infrastructure Construction",
+                desc: "Earthmoving, highway development, site excavation, and commercial site preparation.",
+                types: ["Civil Infrastructure", "Road Building", "Earthwork Excavation", "Site Grading"],
+                cta: "tel:8688855683"
+            },
+            materials: {
+                title: "Construction Materials Supply",
+                desc: "Direct delivery of tested raw building materials to project site locations.",
+                types: ["Sand & River Sand", "M-Sand", "20mm & 40mm Aggregates", "Cement & Structural Steel"],
+                cta: "https://wa.me/918688855683"
+            }
+        };
+
+        function openServiceModal(key) {
+            const data = serviceDetails[key];
+            if(!data) return;
+
+            const modalContent = document.getElementById('service-modal-content');
+            modalContent.innerHTML = `
+                <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Service Overview</span>
+                <h3 class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white my-2">${data.title}</h3>
+                <p class="text-xs sm:text-sm text-gray-300 mb-6 leading-relaxed">${data.desc}</p>
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold uppercase text-amber-300 mb-3">Available Operational Capabilities:</h4>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-400">
+                        ${data.types.map(t => `<li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-2"></i> ${t}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-800">
+                    <a href="tel:8688855683" class="px-6 py-3 bg-gold-gradient text-black font-bold text-xs uppercase rounded text-center">Call 86888 55683</a>
+                    <a href="https://wa.me/918688855683?text=Enquiry%20regarding%20${encodeURIComponent(data.title)}" target="_blank" class="px-6 py-3 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-bold text-xs uppercase rounded text-center">WhatsApp Inquiry</a>
+                </div>
+            `;
+            document.getElementById('service-modal').classList.add('modal-active');
+        }
+
+        function openMaterialModal(materialName) {
+            const modalContent = document.getElementById('service-modal-content');
+            modalContent.innerHTML = `
+                <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Material Specification</span>
+                <h3 class="font-cinzel text-2xl font-extrabold text-white my-2">${materialName} Supply</h3>
+                <p class="text-xs text-gray-300 mb-4">Direct site bulk material dispatch available with high quality control standards.</p>
+                <div class="p-4 bg-amber-500/10 border border-amber-500/30 rounded mb-6 text-xs text-amber-300 font-semibold">
+                    PRICE STATUS: PRICE ON REQUEST (CONTACT FOR CURRENT RATE)
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="tel:8688855683" class="px-6 py-3 bg-gold-gradient text-black font-bold text-xs uppercase rounded text-center">Call For Price: 86888 55683</a>
+                    <a href="https://wa.me/918688855683?text=Hello%20SS%20BROTHER,%20I%20want%20price%20details%20for%20${encodeURIComponent(materialName)}" target="_blank" class="px-6 py-3 bg-emerald-500/20 text-emerald-400 font-bold text-xs uppercase rounded text-center">WhatsApp Quote</a>
+                </div>
+            `;
+            document.getElementById('service-modal').classList.add('modal-active');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.remove('modal-active');
+        }
+
+        // Close modal on outside backdrop click
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('service-modal');
+            if (e.target === modal) {
+                closeServiceModal();
+            }
+        });
+
+        // 6. Review System - LocalStorage Integration
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('rev-name').value;
+            const service = document.getElementById('rev-service').value;
+            const text = document.getElementById('rev-text').value;
+            const rating = document.getElementById('rev-rating').value;
+
+            const reviewCard = document.createElement('div');
+            reviewCard.className = "glass-card p-6 rounded-lg border border-amber-500/30";
+            reviewCard.innerHTML = `
+                <div class="flex items-center justify-between mb-3">
+                    <div>
+                        <h5 class="text-sm font-bold text-white">${name}</h5>
+                        <span class="text-[10px] text-amber-400 uppercase tracking-widest">${service}</span>
+                    </div>
+                    <div class="text-amber-400 text-xs">${'★'.repeat(rating)}</div>
+                </div>
+                <p class="text-xs text-gray-300 italic">“${text}”</p>
+                <span class="text-[10px] text-emerald-400 mt-2 block">✓ Submitted Client Review</span>
+            `;
+
+            document.getElementById('reviews-container').prepend(reviewCard);
+            document.getElementById('review-form').reset();
+            alert("Thank you! Your review has been recorded.");
+        }
+
+        // 7. Interactive Calculation Demo Handling
+        function calculateQuote(e) {
+            e.preventDefault();
+            document.getElementById('calc-result').classList.remove('hidden');
+        }
+
+        // 8. Contact Form Handling Placeholder
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert("Thank you. Your inquiry has been received. SS BROTHER will contact you shortly.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
